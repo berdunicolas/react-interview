@@ -1,0 +1,148 @@
+/* font block */
+@font-face {
+    font-family: 'CenturyGothic'; /* Nombre de la fuente */
+    src: url('~fonts/centurygothic.ttf') format('truetype'); /* Ruta relativa */
+    font-weight: normal; /* Peso opcional */
+    font-style: normal; /* Estilo opcional */
+}
+
+@font-face {
+    font-family: 'CenturyGothicBold'; /* Nombre de la fuente */
+    src: url('~fonts/centurygothic_bold.ttf') format('truetype'); /* Ruta relativa */
+    font-weight: normal; /* Peso opcional */
+    font-style: normal; /* Estilo opcional */
+}
+
+#root {
+    height: 100% !important;
+}
+
+body {
+    font-family: 'CenturyGothic', sans-serif !important;
+}
+
+.font-reg {
+    font-family: 'CenturyGothic', sans-serif !important;
+}
+
+.font-bold{
+    font-family: 'CenturyGothicBold', sans-serif !important;
+}
+
+.font-size-1{
+    font-size: 1rem !important;
+}
+.font-size-2{
+    font-size: 1.2rem !important;
+}
+.font-size-3{
+    font-size: 1.4rem !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'CenturyGothicBold', sans-serif !important;
+}
+/* font block end */
+
+/* colors block */
+.bg-cus-primary{
+    background: rgb(119, 166, 217) !important;
+}
+
+.bg-cus-light{
+    background: rgb(244, 242, 238) !important;
+}
+/* colors block end */
+
+
+/* layout block */
+html, body {
+    height: 100%;
+}
+
+.gradient-bg, body {
+    background: linear-gradient(180deg, rgb(119, 166, 217) 0%, rgba(255,255,255,1) 40%);
+}
+
+.secondary-gradient-bg {
+    background: linear-gradient(180deg, rgb(167, 201, 238) 0%, rgb(3, 45, 84) 40%);
+}
+/* layout block end */
+
+
+
+
+
+/* sidebar block */
+.sidebar {
+    width: 60px; /* Ancho angosto por defecto */
+    transition: width 0.3s; /* Transición suave para expandir */
+    position: relative;
+}
+
+.sidebar.expanded {
+    width: 250px; /* Ancho expandido */
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar.expanded .nav-link {
+    justify-content: flex-start;
+}
+
+.sidebar .nav-link span {
+    display: none; /* Ocultar texto en el estado angosto */
+}
+
+.sidebar.expanded .nav-link span {
+    display: block; /* Mostrar texto en el estado expandido */
+    margin-left: 10px;
+}
+
+.sidebar-toggler {
+    position: absolute;
+    top: 30px;
+    right: -50px;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*color: rgb(105, 0, 28);*/
+    /*background: rgb(119, 166, 217);*/
+}
+
+.logo-sidebar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-text {
+    display: none;
+}
+.sidebar.expanded .logo-text {
+    display: contents;
+    margin-left: 10px;
+}
+
+.nav-subordinate {
+    display: none;
+}
+
+.sidebar.expanded .nav-subordinate {
+    display: block;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+/* sidebar block end */
+
+
+.text-header{
+    color: rgb(105, 0, 28) !important;
+}
